@@ -1,8 +1,8 @@
 class GetTopSellingTickets:
-    def get_view():
+    def get_view(self):
         return "Get the top 3 selling tickets"
     
-    def run(connection):
+    def run(self, connection):
         cursor = connection.cursor()
         query = ("""
                 with event_ticket_totals as (
@@ -22,10 +22,10 @@ class GetTopSellingTickets:
             print(f"  - event_name={event_id}, total_tickets_sold={total_tickets_sold}, total_revenue=${total_revenue}")
 
 class GetTotalTicketsSoldPerEventType:
-    def get_view():
+    def get_view(self):
         return "Get the total tickets sold for each event type"
     
-    def run(connection):
+    def run(self, connection):
         cursor = connection.cursor()
         query = (
             """
@@ -47,10 +47,10 @@ class GetTotalTicketsSoldPerEventType:
             print(f"  - event_type={event_type}, total_tickets_sold={total_tickets_sold}")
 
 class GetEventSummary:
-    def get_view():
+    def get_view(self):
         return "Get summary of all events"
     
-    def run(connection):
+    def run(self, connection):
         cursor = connection.cursor()
         query = (
             """
