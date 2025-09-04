@@ -23,7 +23,7 @@ def start_cli(connection):
             print(f"\nInvalid input - given: {option_selected} options: {options}")
             print("Please try again")
             continue
-
+        
         ACTIONS[option_selected].run(connection)
 
 def get_optional_args():
